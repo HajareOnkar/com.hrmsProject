@@ -6,6 +6,7 @@
       <class name="com.hrmsProject.Runner.RunnerClass">
         <methods>
           <include name="setUpClass"/>
+          <include name="ConnectDB"/>
           <include name="runScenario"/>
           <include name="tearDownClass"/>
           <include name="openBrowser"/>

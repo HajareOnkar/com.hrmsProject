@@ -9,25 +9,21 @@ import org.testng.annotations.Parameters;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass extends AbstractTestNGCucumberTests{
-	
+public class BaseClass extends AbstractTestNGCucumberTests {
+
 	public static WebDriver driver;
-	
+
 	@BeforeTest
 	@Parameters("browser")
 	public void openBrowser(String browser) {
-		if(browser.equalsIgnoreCase("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
-		}
-		else {
+			driver = new ChromeDriver();
+		} else {
 			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();
-			
+			driver = new FirefoxDriver();
+
 		}
 	}
-	
-	
-	
 
 }
